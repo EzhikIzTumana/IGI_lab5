@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Salaries</title>
+</head>
+<body>
+    <h1>Agent Salaries</h1>
+    <ul>
+        {% for salary in salaries %}
+            <li>
+                <strong>Agent:</strong> {{ salary.agent.first_name }} {{ salary.agent.last_name }}<br>
+                <strong>Branch:</strong> {{ salary.policy.branch.name }}<br>
+                <strong>Insurance Type:</strong> {{ salary.policy.insurance_type.name }}<br>
+                <strong>Insurance Amount:</strong> {{ salary.policy.insurance_amount }}<br>
+                <strong>Commission Rate:</strong> {{ salary.policy.insurance_type.commission_rate }}%<br>
+                <strong>Commission Amount:</strong> {{ salary.commission_amount }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

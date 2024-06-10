@@ -1,0 +1,10 @@
+<a href="{% url 'dashboard' %}">Account</a></li>
+{% if contracts %}
+    <ul>
+    {% for contract in contracts %}
+        <li>{{ contract }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Нет результатов</p>
+{% endif %}

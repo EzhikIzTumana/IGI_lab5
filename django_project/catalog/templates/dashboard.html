@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Profile</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <nav>
+        {% if user.status == 'agent' %}
+            <a href="{% url 'new_policy' %}">New Policy</a>
+            <a href="{% url 'policy_list' %}">My Policys</a>
+            <a href="{% url 'contract_search' %}">Search</a>
+        {% else %}
+            <a href="{% url 'new_contract' %}">New Contract</a>
+            <a href="{% url 'contract_list' %}">My Contracts</a>
+        {% endif %}
+        <a href="{% url 'home' %}">Home</a>
+        <li>
+            <form id="logout-form" action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        </li>
+    </nav>
+</body>
+</html>

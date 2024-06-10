@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ</title>
+</head>
+<body>
+    <a href="{% url 'home' %}">Home</a>
+
+    <h1>Question-Answer</h1>
+    {% for faq in faqs %}
+        <div>
+            <h2>Question</h2>
+            <p>{{ faq.question }}</p>
+            <h2>Answer</h2>
+            <p>{{ faq.answer }}</p>
+            <p>Date: {{ faq.date|date:"d.m.Y" }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>

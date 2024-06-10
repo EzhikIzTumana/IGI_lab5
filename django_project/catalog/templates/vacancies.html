@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacancies</title>
+</head>
+<body>
+    <h1>Vacancies</h1>
+    <ul>
+        {% for vacancy in vacancies %}
+            <li>
+                <h2>{{ vacancy.name }}</h2>
+                <p>{{ vacancy.description }}</p>
+                <p>Requirements: {{ vacancy.need }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

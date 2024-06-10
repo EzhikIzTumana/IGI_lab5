@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+</head>
+<body>
+    <h1>Contact List</h1>
+    <ul>
+        {% for agent in agents %}
+            <li>
+                <p>Name: {{ agent.get_full_name }}</p>
+                <p>Status: {{ agent.status }}</p>
+                <p>Email: {{ agent.email }}</p>
+                <p>Phone Number: {{ agent.phone_number }}</p>
+                <p>Department: {{ agent.department }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

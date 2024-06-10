@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promos</title>
+</head>
+<body>
+    <h1>Promos</h1>
+    <ul>
+        {% for promo in promos %}
+            <p>Promocode: {{ promo.code }}</p>
+            <p>Discount: {{promo.discount}}</p>
+            <p>Expires on: {{ promo.expiry_date }}</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>

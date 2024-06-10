@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insurance Types</title>
+</head>
+<body>
+    <h1>Insurance Types</h1>
+    <ul>
+        {% for insurance_type in insurance_types %}
+        <h2>{{ insurance_type.name }}</h2>
+                <p>Description: {{ insurance_type.description }}</p>
+                <p>Commission rate: {{insurance_type.commission_rate}}</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>

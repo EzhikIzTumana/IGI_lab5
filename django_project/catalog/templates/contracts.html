@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <li><a href="{% url 'dashboard' %}">Account</a></li>
+<head>
+    <title>Contracts</title>
+</head>
+<body>
+    <h1>Contracts</h1>
+    <ul>
+        {% for contract in contracts %}
+            <p>Client: {{ contract.client }}</p>
+            <p>Department: {{ contract.department }}</p>
+            <p>Type: {{ contract.insurance_type }}</p>
+            <p>Object: {{ contract.insurable_object }}</p>
+            <p>Risk: {{ contract.insurance_risk }}</p>
+            <p>Amount: {{ contract.insurance_amount }}</p>
+            <p>Final Amount: {{ contract.calculate_final_amount }}</p> 
+            {% if not contract.is_processed %}
+            - <a href="{% url 'edit_contract' contract.id %}">Edit</a> - <a href="{% url 'delete_contract' contract.id %}">Delete</a>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+</html>

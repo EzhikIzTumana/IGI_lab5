@@ -1,0 +1,6 @@
+<a href="{% url 'dashboard' %}">Account</a></li>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Искать</button>
+</form>

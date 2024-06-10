@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Contract</title>
+</head>
+<body>
+    <h1>New Contract</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Contract</button>
+    </form>
+</body>
+</html>

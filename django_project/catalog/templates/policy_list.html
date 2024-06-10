@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <li><a href="{% url 'dashboard' %}">Account</a></li>
+<head>
+    <title>Policy List</title>
+</head>
+<body>
+    <h1>Policy List</h1>
+    <ul>
+        {% for policy in policies %}
+            <li>{{ policy }}</li>
+        {% endfor %}
+    </ul>
+    {% if is_agent %}
+        <a href="{% url 'new_policy' %}">Add New Policy</a>
+    {% endif %}
+</body>
+</html>

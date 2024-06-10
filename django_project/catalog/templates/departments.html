@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Departments</title>
+</head>
+<body>
+    <h1>Departments</h1>
+    <ul>
+        {% for department in departments %}
+            <div>
+                <h2>{{ department.name }}</h2>
+                <p>Address: {{ department.address }}</p>
+                <p>Phone: {{department.phone}}</p>
+            </div>
+        {% endfor %}
+    </ul>
+</body>
+</html>
